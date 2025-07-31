@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divya John - DevOps Engineer Portfolio</title>
+    <title>Divya John - DevOps Engineer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -16,555 +16,604 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         /* Header Styles */
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 2rem 0;
+            padding: 60px 40px;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        header::before {
+        .header::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.1;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="40" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
         }
 
         .profile-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            margin: 0 auto 1rem;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 60px;
             color: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
         }
 
-        .profile-img:hover {
-            transform: scale(1.05);
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-        }
-
-        .title {
-            font-size: 1.2rem;
+        .header .title {
+            font-size: 1.5em;
+            margin-bottom: 30px;
             opacity: 0.9;
-            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out 0.4s both;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 2rem;
-            margin-top: 1rem;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            color: rgba(255,255,255,0.9);
+            gap: 8px;
+            font-size: 1.1em;
+        }
+
+        .contact-item i {
+            color: #3498db;
+        }
+
+        .contact-item a {
+            color: white;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        .contact-item:hover {
-            color: #fff;
+        .contact-item a:hover {
+            color: #3498db;
         }
 
         /* Navigation */
-        nav {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .nav {
+            background: #34495e;
+            padding: 0;
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
-        .nav-container {
+        .nav ul {
+            list-style: none;
             display: flex;
             justify-content: center;
-            padding: 1rem 0;
+            flex-wrap: wrap;
         }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
+        .nav li {
+            margin: 0;
         }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            background: #667eea;
+        .nav a {
+            display: block;
+            padding: 15px 25px;
             color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
-        /* Main Content */
-        main {
-            padding: 2rem 0;
+        .nav a:hover {
+            background: #2c3e50;
+            color: #3498db;
         }
 
-        section {
-            background: white;
-            margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .nav a.active {
+            background: #2c3e50;
+            color: #3498db;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 60px;
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(30px);
             transition: all 0.6s ease;
         }
 
-        section.visible {
+        .section.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        h2 {
-            color: #667eea;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
             position: relative;
-            padding-bottom: 0.5rem;
         }
 
-        h2::after {
+        .section h2::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -3px;
             left: 0;
             width: 50px;
             height: 3px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 2px;
+            background: #e74c3c;
         }
 
-        /* Skills Grid */
+        /* Summary */
+        .summary {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+
+        /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .skill-category {
             background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 4px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         .skill-category h3 {
-            color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 10px;
         }
 
         .skill-tag {
-            background: #667eea;
+            background: #3498db;
             color: white;
-            padding: 0.3rem 0.8rem;
+            padding: 8px 15px;
             border-radius: 20px;
-            font-size: 0.9rem;
-            transition: transform 0.2s ease;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
         }
 
         .skill-tag:hover {
+            background: #2980b9;
             transform: scale(1.05);
         }
 
         /* Experience */
         .experience-item {
-            border-left: 3px solid #667eea;
-            padding-left: 1.5rem;
-            margin-bottom: 2rem;
-            position: relative;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #e74c3c;
+            transition: all 0.3s ease;
         }
 
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 0;
-            width: 13px;
-            height: 13px;
-            background: #667eea;
-            border-radius: 50%;
+        .experience-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .experience-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 0.5rem;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
-        .job-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #333;
+        .experience-title {
+            flex: 1;
         }
 
-        .company {
-            color: #667eea;
-            font-weight: 500;
+        .experience-title h3 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-bottom: 5px;
         }
 
-        .duration {
-            color: #666;
-            font-style: italic;
+        .experience-title h4 {
+            color: #e74c3c;
+            font-size: 1.2em;
+            margin-bottom: 5px;
         }
 
-        .job-description {
-            margin-top: 1rem;
+        .experience-date {
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            white-space: nowrap;
         }
 
-        .job-description ul {
-            margin-left: 1rem;
+        .experience-description ul {
+            list-style: none;
+            padding-left: 0;
         }
 
-        .job-description li {
-            margin-bottom: 0.5rem;
+        .experience-description li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .experience-description li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #3498db;
         }
 
         .tools-used {
-            margin-top: 1rem;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 5px;
-            border-left: 3px solid #28a745;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
         }
 
         .tools-used strong {
-            color: #28a745;
+            color: #2c3e50;
         }
 
         /* Projects */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
         }
 
         .project-card {
             background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-top: 4px solid #667eea;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #2ecc71;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
 
-        .project-title {
-            color: #333;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+        .project-header {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .project-header h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .project-content {
+            padding: 25px;
         }
 
         .project-tools {
-            background: #e9ecef;
-            padding: 0.5rem;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
-        .project-description {
-            font-size: 0.95rem;
-            line-height: 1.6;
+        .project-tools strong {
+            color: #2ecc71;
         }
 
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+        .project-section {
+            margin-bottom: 20px;
         }
 
-        .footer-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
+        .project-section h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
+        /* Education & Certifications */
+        .education-item, .cert-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid #9b59b6;
+            transition: all 0.3s ease;
         }
 
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
+        .education-item:hover, .cert-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .social-links a:hover {
-            color: #667eea;
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
-                padding: 0 15px;
+                margin: 10px;
+                border-radius: 0;
             }
 
-            h1 {
-                font-size: 2rem;
+            .header {
+                padding: 40px 20px;
+            }
+
+            .header h1 {
+                font-size: 2.5em;
             }
 
             .contact-info {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 15px;
             }
 
-            .nav-links {
-                flex-wrap: wrap;
-                gap: 1rem;
+            .content {
+                padding: 20px;
+            }
+
+            .section h2 {
+                font-size: 2em;
+            }
+
+            .nav ul {
+                flex-direction: column;
             }
 
             .experience-header {
                 flex-direction: column;
-                align-items: flex-start;
+                gap: 15px;
             }
 
-            section {
-                padding: 1.5rem;
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
         }
 
         /* Scroll to top button */
         .scroll-top {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #667eea;
+            bottom: 30px;
+            right: 30px;
+            background: #3498db;
             color: white;
-            border: none;
-            border-radius: 50%;
             width: 50px;
             height: 50px;
-            font-size: 1.2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
             opacity: 0;
+            visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1000;
         }
 
         .scroll-top.visible {
             opacity: 1;
+            visibility: visible;
         }
 
         .scroll-top:hover {
-            background: #764ba2;
+            background: #2980b9;
             transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-img">
-                    <i class="fas fa-user"></i>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="profile-img">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1>Divya John</h1>
+            <p class="title">DevOps Engineer</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>9023956258</span>
                 </div>
-                <h1>Divya John</h1>
-                <p class="title">DevOps Engineer</p>
-                <div class="contact-info">
-                    <a href="tel:9023956258" class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>9023956258</span>
-                    </a>
-                    <a href="mailto:divyajohn1995@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>divyajohn1995@gmail.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/john-divya" class="contact-item" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/DivyaJohn" class="contact-item" target="_blank">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:divyajohn1995@gmail.com">divyajohn1995@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/john-divya" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/DivyaJohn" target="_blank">GitHub</a>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="nav-container">
-                <ul class="nav-links">
-                    <li><a href="#summary" class="nav-link">Summary</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#education" class="nav-link">Education</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <!-- Navigation -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#summary" class="nav-link">Summary</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+            </ul>
+        </nav>
 
-    <!-- Main Content -->
-    <main>
-        <div class="container">
-            <!-- Summary Section -->
-            <section id="summary">
-                <h2><i class="fas fa-user-circle"></i> Professional Summary</h2>
-                <p>Result-oriented DevOps Engineer with 3 years of hands-on experience in automating and optimizing mission-critical deployments across cloud and on-premise environments. Demonstrated expertise in building robust CI/CD pipelines using Jenkins, Docker, and Kubernetes. Proficient in Infrastructure as Code (IaC), monitoring, and developing scalable cloud solutions that enhance efficiency, reliability, and performance. Recently took a planned career break for childcare, during which I remained actively engaged with the latest industry developments and continued to refine my technical skill set in preparation for a seamless transition back into the workforce.</p>
+        <!-- Content -->
+        <div class="content">
+            <!-- Summary -->
+            <section id="summary" class="section">
+                <h2>Professional Summary</h2>
+                <div class="summary">
+                    Result-oriented DevOps Engineer with 3 years of hands-on experience in automating and optimizing mission-critical deployments across cloud and on-premise environments. Demonstrated expertise in building robust CI/CD pipelines using Jenkins, Docker, and Kubernetes. Proficient in Infrastructure as Code (IaC), monitoring, and developing scalable cloud solutions that enhance efficiency, reliability, and performance. Recently took a planned career break for childcare, during which I remained actively engaged with the latest industry developments and continued to refine my technical skill set in preparation for a seamless transition back into the workforce.
+                </div>
             </section>
 
-            <!-- Skills Section -->
-            <section id="skills">
-                <h2><i class="fas fa-cogs"></i> Technical Skills</h2>
+            <!-- Skills -->
+            <section id="skills" class="section">
+                <h2>Technical Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Cloud Platforms</h3>
+                        <h3><i class="fas fa-cogs"></i> Automation & IaC</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">Azure</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>DevOps Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Jenkins</span>
-                            <span class="skill-tag">Azure DevOps</span>
-                            <span class="skill-tag">Git</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Containerization</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Kubernetes</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Infrastructure as Code</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Terraform</span>
                             <span class="skill-tag">Ansible</span>
+                            <span class="skill-tag">Terraform</span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Programming Languages</h3>
+                        <h3><i class="fas fa-code"></i> Programming Languages</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">Java</span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Monitoring & Quality</h3>
+                        <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">Grafana</span>
-                            <span class="skill-tag">Prometheus</span>
-                            <span class="skill-tag">Zabbix</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Azure</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-shipping-fast"></i> CI/CD & Build Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Jenkins</span>
+                            <span class="skill-tag">Maven</span>
                             <span class="skill-tag">SonarQube</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-cube"></i> Containerization</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Windows</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code-branch"></i> Version Control</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Experience Section -->
-            <section id="experience">
-                <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            <!-- Experience -->
+            <section id="experience" class="section">
+                <h2>Professional Experience</h2>
+                
                 <div class="experience-item">
                     <div class="experience-header">
-                        <div>
-                            <div class="company">Armia Systems Pvt. Ltd</div>
-                            <div class="job-title">Junior System Engineer</div>
+                        <div class="experience-title">
+                            <h3>Armia Systems Pvt. Ltd</h3>
+                            <h4>Junior DevOps Engineer</h4>
                         </div>
-                        <div class="duration">Feb 2022 – Aug 2024</div>
+                        <div class="experience-date">Feb 2022 – Aug 2024</div>
                     </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Provided L2-level support to clients</li>
-                            <li>Troubleshot and resolved technical issues</li>
-                            <li>Monitored system performance, identified potential issues, and reported using Grafana and Zabbix</li>
-                            <li>Installed, configured, and maintained hardware and software components</li>
-                            <li>Worked closely with operations and QA teams to ensure smooth and efficient problem solving</li>
-                            <li>Enforced security best practices by implementing SSL for secure data transmission</li>
-                        </ul>
-                        <div class="tools-used">
-                            <strong>Tools Used:</strong> Linux, CentOS, CWP cPanel, DNS, SSL, Zabbix, Grafana
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="job-title">Junior DevOps Engineer</div>
-                            <!--<div class="company">Armia Systems Pvt. Ltd</div> -->
-                        </div>
-                        <!--<div class="duration">Feb 2022 – Aug 2024</div> -->
-                    </div>
-                    <div class="job-description">
+                    <div class="experience-description">
                         <ul>
                             <li>Designed and deployed containerized applications to Azure Kubernetes Service (AKS)</li>
                             <li>Created end-to-end CI/CD pipelines from scratch</li>
-                            <li>Automated infrastructure provisioning, streamlining resource creation on Azure</li>
+                            <li>Automated infrastructure provisioning, streamlining resource creation on AWS</li>
                             <li>Built and maintained Docker images with custom Dockerfiles</li>
                             <li>Configured monitoring tools to track system performance and troubleshoot issues proactively</li>
                             <li>Documented system configurations and procedures for knowledge sharing within the team</li>
-                            <li>Developed and deployed serverless Azure Functions to handle event-driven processes</li>
+                            <li>Developed and deployed serverless AWS Functions to handle event-driven processes</li>
                             <li>Collaborated in Agile teams for sprint planning, task tracking, and issue resolution</li>
                         </ul>
                         <div class="tools-used">
@@ -572,125 +621,200 @@
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education">
-                <h2><i class="fas fa-graduation-cap"></i> Education & Internships</h2>
-                
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="job-title">Master of Computer Application</div>
-                            <div class="company">Kerala Technological University</div>
-                        </div>
-                        <div class="duration">Aug 2016 – Sep 2019</div>
-                    </div>
-                    <p>Amal Jyothi College of Engineering</p>
-                </div>
 
                 <div class="experience-item">
                     <div class="experience-header">
-                        <div>
-                            <div class="job-title">Advanced Certification of Cloud Computing and DevOps</div>
-                            <div class="company">Intellipaat - Bengaluru</div>
+                        <div class="experience-title">
+                            <h3>Armia Systems Pvt. Ltd</h3>
+                            <h4>Junior System Engineer</h4>
                         </div>
+                        <div class="experience-date">Feb 2022 – Aug 2024</div>
                     </div>
-                    <div class="job-description">
+                    <div class="experience-description">
                         <ul>
-                            <li>Strong technical expertise and hands-on experience with Amazon Web Services (AWS) and DevOps tools and Azure</li>
-                            <li>Skilled in developing scripts and automation tools to streamline deployment, configuration, and system maintenance</li>
-                            <li>Proficient in building and deploying cloud-based applications using CI/CD pipelines and infrastructure automation tools such as Jenkins, Terraform, Ansible, and GitHub</li>
-                            <li>Hands-on experience with configuration management solutions, including Ansible, Chef, and Puppet</li>
-                            <li>Well-versed in implementing AWS security best practices, with a focus on IAM roles, security groups, and secure network configurations using VPCs and VPNs</li>
+                            <li>Provide II-level support to the clients</li>
+                            <li>Troubleshoot and resolve technical issues</li>
+                            <li>Monitor system performance, identify potential issues, and report</li>
+                            <li>Install, configure, and maintain hardware and software components</li>
+                            <li>Work closely with operations and QA teams to ensure smooth and efficient problem solving</li>
+                            <li>Enforce security best practices by implementing SSL for secure data transmission</li>
                         </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="job-title">Linux and Web-Hosting</div>
-                            <div class="company">Serverstreak - Kochi</div>
+                        <div class="tools-used">
+                            <strong>Tools Used:</strong> Linux, CentOS, CWP cPanel, DNS, SSL, Zabbix, Grafana
                         </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Hands-on experience with Linux command-line operations and web hosting environments</li>
-                            <li>Skilled in working with virtualization technologies such as VMware</li>
-                            <li>Proficient in Linux distributions, including Ubuntu and CentOS</li>
-                            <li>Experienced in web hosting technologies, including Apache, PHP, MySQL, and related tools</li>
-                        </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Projects Section -->
-            <section id="projects">
-                <h2><i class="fas fa-project-diagram"></i> Key Projects</h2>
+            <!-- Projects -->
+            <section id="projects" class="section">
+                <h2>Key Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3 class="project-title">Multi-Tier Website Deployment on AWS</h3>
-                        <div class="project-tools">
-                            <strong>Tools:</strong> AWS EC2, RDS, CloudWatch, AutoScaling, ALB, PHP, MySQL, IAM, Security Groups, KMS
+                        <div class="project-header">
+                            <h3>Multi-Tier Website Deployment on AWS</h3>
                         </div>
-                        <div class="project-description">
-                            <p>Deployed a scalable multi-tier web application with presentation layer on EC2, application layer using PHP, and database layer with Amazon RDS. Implemented Auto Scaling Groups across multiple AZs with Application Load Balancer for high availability and automatic scaling based on CloudWatch metrics.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3 class="project-title">CI/CD Pipeline Implementation</h3>
-                        <div class="project-tools">
-                            <strong>Tools:</strong> Jenkins, Git, Docker, Docker Hub
-                        </div>
-                        <div class="project-description">
-                            <p>Built comprehensive CI/CD pipeline with branch-specific Jenkins jobs for develop, master, and production environments. Implemented automated Docker image building and deployment with proper port mapping and testing workflows using webhooks for automatic triggering.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3 class="project-title">DevOps Infrastructure Automation</h3>
-                        <div class="project-tools">
-                            <strong>Tools:</strong> Terraform, Ansible, AWS, Git
-                        </div>
-                        <div class="project-description">
-                            <p>Automated infrastructure provisioning using Terraform for EC2 instances, security groups, and IAM roles. Implemented configuration management with Ansible playbooks for package installation, service configuration, and application deployment across multiple environments.</p>
+                        <div class="project-content">
+                            <div class="project-tools">
+                                <strong>Tools Used:</strong> AWS EC2, RDS, CloudWatch, AutoScaling, ALB, PHP, MySQL, IAM, Security Groups, KMS
+                            </div>
+                            <div class="project-section">
+                                <h4>Architecture:</h4>
+                                <ul>
+                                    <li><strong>Presentation Layer:</strong> PHP-based website hosted on Amazon EC2 instances</li>
+                                    <li><strong>Application Layer:</strong> Handled user requests and interactions using PHP</li>
+                                    <li><strong>Database Layer:</strong> Amazon RDS (MySQL) for data storage</li>
+                                </ul>
+                            </div>
+                            <div class="project-section">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Auto Scaling Group across multiple Availability Zones</li>
+                                    <li>Application Load Balancer for traffic distribution</li>
+                                    <li>Multi-AZ RDS deployment with encryption</li>
+                                    <li>Security Groups and IAM policies for access control</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
                     <div class="project-card">
-                        <h3 class="project-title">Employee Profile Database Application</h3>
-                        <div class="project-tools">
-                            <strong>Tools:</strong> EC2, ELB, VPC, S3, IAM, RDS, DynamoDB, Route 53, Freenom
+                        <div class="project-header">
+                            <h3>CI/CD Pipeline Implementation</h3>
                         </div>
-                        <div class="project-description">
-                            <p>Developed full-stack employee profile management system with Python backend, secure file storage in S3, structured data in RDS, and session management with DynamoDB. Implemented custom domain mapping with Route 53 and comprehensive IAM security policies.</p>
+                        <div class="project-content">
+                            <div class="project-tools">
+                                <strong>Tools Used:</strong> Jenkins, Git, Docker, Docker Hub
+                            </div>
+                            <div class="project-section">
+                                <h4>Branch Strategy:</h4>
+                                <ul>
+                                    <li><strong>Develop branch:</strong> Testing changes in Dockerfile</li>
+                                    <li><strong>Master branch:</strong> Validating final version before release</li>
+                                    <li><strong>Production branch:</strong> Final release deployment</li>
+                                </ul>
+                            </div>
+                            <div class="project-section">
+                                <h4>Implementation:</h4>
+                                <ul>
+                                    <li>Branch-specific Jenkins jobs with automatic triggers</li>
+                                    <li>Docker containerization with environment-specific ports</li>
+                                    <li>Automated testing and deployment pipeline</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Infrastructure Automation</h3>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tools">
+                                <strong>Tools Used:</strong> Terraform, Ansible, AWS, Git
+                            </div>
+                            <div class="project-section">
+                                <h4>Terraform Implementation:</h4>
+                                <ul>
+                                    <li>Modular scripts for EC2 instances, Security Groups, Key Pairs, IAM Roles</li>
+                                    <li>Consistent infrastructure provisioning across environments</li>
+                                </ul>
+                            </div>
+                            <div class="project-section">
+                                <h4>Ansible Configuration:</h4>
+                                <ul>
+                                    <li>Automated package installation (Apache/Nginx, Java, Jenkins)</li>
+                                    <li>Service configuration and application deployment</li>
+                                    <li>SSH access and environment variable setup</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Employee Profile Database Application</h3>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tools">
+                                <strong>Tools Used:</strong> EC2, ELB, VPC, S3, IAM, RDS, DynamoDB, Route 53, Freenom
+                            </div>
+                            <div class="project-section">
+                                <h4>Architecture:</h4>
+                                <ul>
+                                    <li>Custom VPC with public and private subnets</li>
+                                    <li>EC2 instances in private subnets with ELB in public subnet</li>
+                                    <li>S3 for media storage with encryption</li>
+                                    <li>RDS for structured data, DynamoDB for session metadata</li>
+                                </ul>
+                            </div>
+                            <div class="project-section">
+                                <h4>Security & DNS:</h4>
+                                <ul>
+                                    <li>Custom IAM roles with least privilege access</li>
+                                    <li>Route 53 DNS configuration with custom domain</li>
+                                    <li>Multi-AZ deployment for high availability</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Divya John. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/john-divya" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/DivyaJohn" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:divyajohn1995@gmail.com"><i class="fas fa-envelope"></i></a>
+            <!-- Education -->
+            <section id="education" class="section">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>Master of Computer Application</h3>
+                            <h4>Kerala Technological University</h4>
+                            <p>Amal Jyothi College of Engineering</p>
+                        </div>
+                        <div class="experience-date">Aug 2016 – Sep 2019</div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </footer>
+            </section>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop">
+            <!-- Certifications -->
+            <section id="certifications" class="section">
+                <h2>Certifications & Training</h2>
+                
+                <div class="cert-item">
+                    <h3>Advanced Certification of Cloud Computing and DevOps</h3>
+                    <h4>Intellipaat - Bengaluru</h4>
+                    <ul>
+                        <li>Strong technical expertise and hands-on experience with Amazon Web Services (AWS) and DevOps tools and Azure</li>
+                        <li>Skilled in developing scripts and automation tools to streamline deployment, configuration, and system maintenance</li>
+                        <li>Proficient in building and deploying cloud-based applications using CI/CD pipelines and infrastructure automation tools such as Jenkins, Terraform, Ansible, and GitHub</li>
+                        <li>Hands-on experience with configuration management solutions, including Ansible, Chef, and Puppet</li>
+                        <li>Well-versed in implementing AWS security best practices, with a focus on IAM roles, security groups, and secure network configurations using VPCs and VPNs</li>
+                    </ul>
+                </div>
+
+                <div class="cert-item">
+                    <h3>Linux and Web-Hosting</h3>
+                    <h4>Serverstreak - Kochi</h4>
+                    <ul>
+                        <li>Hands-on experience with Linux command-line operations and web hosting environments</li>
+                        <li>Skilled in working with virtualization technologies such as VMware</li>
+                        <li>Proficient in Linux distributions, including Ubuntu and CentOS</li>
+                        <li>Experienced in web hosting technologies, including Apache, PHP, MySQL, and related tools</li>
+                    </ul>
+                </div>
+
+                <div class="cert-item">
+                    <h3>Certificate of Training</h3>
+                    <h4>Startups Valley - TBI in Amal Jyothi College of Engineering</h4>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-top" id="scrollTop">
         <i class="fas fa-arrow-up"></i>
-    </button>
+    </div>
 
     <script>
         // Smooth scrolling for navigation links
@@ -700,16 +824,16 @@
                 const targetId = this.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
                 
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-                
-                // Update active nav link
+                // Remove active class from all links
                 document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                // Add active class to clicked link
                 this.classList.add('active');
+                
+                // Smooth scroll to target
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             });
         });
 
@@ -724,28 +848,26 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     
-                    // Update active nav link based on visible section
+                    // Update active navigation link
                     const sectionId = entry.target.getAttribute('id');
-                    const correspondingNavLink = document.querySelector(`a[href="#${sectionId}"]`);
-                    
-                    if (correspondingNavLink) {
-                        document.querySelectorAll('.nav-link').forEach(link => {
-                            link.classList.remove('active');
-                        });
-                        correspondingNavLink.classList.add('active');
-                    }
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
                 }
             });
         }, observerOptions);
 
         // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
+        document.querySelectorAll('.section').forEach(section => {
             observer.observe(section);
         });
 
         // Scroll to top functionality
         const scrollTopBtn = document.getElementById('scrollTop');
-
+        
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) {
                 scrollTopBtn.classList.add('visible');
@@ -758,6 +880,17 @@
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
+            });
+        });
+
+        // Add hover effects to skill tags
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) rotate(2deg)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
             });
         });
 
@@ -776,78 +909,19 @@
             type();
         }
 
-        // Initialize typing effect when page loads
+        // Initialize typing effect after page load
         window.addEventListener('load', function() {
-            const titleElement = document.querySelector('.title');
+            const titleElement = document.querySelector('.header .title');
             const originalText = titleElement.textContent;
-            typeWriter(titleElement, originalText, 150);
+            setTimeout(() => {
+                typeWriter(titleElement, originalText, 150);
+            }, 1000);
         });
-
-        // Add hover effects to skill tags
-        document.querySelectorAll('.skill-tag').forEach(tag => {
-            tag.addEventListener('mouseenter', function() {
-                this.style.background = '#764ba2';
-            });
-            
-            tag.addEventListener('mouseleave', function() {
-                this.style.background = '#667eea';
-            });
-        });
-
-        // Add click to copy email functionality
-        document.querySelector('a[href^="mailto:"]').addEventListener('click', function(e) {
-            e.preventDefault();
-            const email = 'divyajohn1995@gmail.com';
-            
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(email).then(function() {
-                    // Create temporary notification
-                    const notification = document.createElement('div');
-                    notification.textContent = 'Email copied to clipboard!';
-                    notification.style.cssText = `
-                        position: fixed;
-                        top: 20px;
-                        right: 20px;
-                        background: #28a745;
-                        color: white;
-                        padding: 1rem;
-                        border-radius: 5px;
-                        z-index: 1000;
-                        animation: slideIn 0.3s ease;
-                    `;
-                    
-                    document.body.appendChild(notification);
-                    
-                    setTimeout(() => {
-                        notification.remove();
-                    }, 3000);
-                });
-            } else {
-                // Fallback: open email client
-                window.location.href = this.href;
-            }
-        });
-
-        // Add CSS animation for notification
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from {
-                    transform: translateX(100%);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
-        `;
-        document.head.appendChild(style);
 
         // Add parallax effect to header
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
-            const header = document.querySelector('header');
+            const header = document.querySelector('.header');
             const rate = scrolled * -0.5;
             
             if (header) {
@@ -855,15 +929,19 @@
             }
         });
 
-        // Add loading animation
-        window.addEventListener('load', function() {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.5s ease';
-            
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 100);
+        // Add click animation to project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
         });
+
+        // Initialize first section as visible
+        document.querySelector('#summary').classList.add('visible');
+        document.querySelector('.nav-link[href="#summary"]').classList.add('active');
     </script>
 </body>
 </html>
